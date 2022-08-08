@@ -1,0 +1,18 @@
+.row.featured__filter{
+	background-color: white;
+	margin-left: 1px;
+	min-width: 970px;
+}
+
+.row.featured__filter a {
+	color: #0064c2;
+	font-size: 13px;
+	text-align: center;
+    padding: 0 5px;
+	width: 120px;
+}
+
+.col-lg-1 {
+    width: 10.5%;
+}
+
