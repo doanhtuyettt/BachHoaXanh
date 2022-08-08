@@ -4,7 +4,7 @@ import Product from "../Product/product";
 
 const Nav = () =>{
     const img = {
-        width :45
+        width :45    
     }
     const data =[
         {
@@ -16,7 +16,7 @@ const Nav = () =>{
             image : require('../assets/image/kem.png')
         },
         {
-            content:'Nước giặt',
+            content:'Giấy vệ sinh',
             image:require('../assets/image/giay.png')
         },
         {
@@ -24,24 +24,24 @@ const Nav = () =>{
             image:require('../assets/image/nuoc-giat.png')
         },
         {
-            content:'Nước giặt',
+            content:'Mì ăn liền',
             image:require('../assets/image/mi.png')
         },
         {
-            content:'Nước giặt',
+            content:'Nước mắm',
             image:require('../assets/image/nuoc-mam.png')
         },
         {
-            content:'Nước giặt',
+            content:'Nước ngọt',
             image:require('../assets/image/nuoc-ngot.png')
         },
         {
-            content:'Nước giặt',
+            content:'Rau củ,trái cây',
             image:require('../assets/image/rau-cu.png')
         },
         {
-            content:'Nước giặt',
-            image:require('../assets/image/nuoc-giat.png')
+            content:'Sữa tươi',
+            image:require('../assets/image/sua.png')
         }
     ]
     return (

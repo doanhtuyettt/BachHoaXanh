@@ -14,47 +14,47 @@ const Header = () => {
         },
         {
             name : "RAU, CỦ, TRÁI CÂY",
-            sub:["Rau xanh các loại","Củ,quả các loại"],
+            sub:["Rau xanh các loại","Củ các loại","Trái cây các loại"],
             id: 2,
         },
         {
             name : "THỰC PHẨM ĐÔNG-MÁT",
-            sub:[],
+            sub:['Kem các loại','Xúc xích,lạp xưởng,chả lụa,cá-bò viên','Há cảo, sủi cảo'],
             id: 3,
         },
         {
             name : "MÌ, MIẾN, CHÁO, PHỞ",
-            sub:[],
+            sub:['Mì,Phở,Bún ăn liền','Hủ tiếu,miến, bánh canh','Cháo gói,cháo tươi'],
             id: 4,
         },
         {
             name : "GẠO, BỘT, ĐỒ KHÔ",
-            sub:[],
+            sub:['Gạo,bột các loại','Đồ hộp các loại','Đồ chay'],
             id: 5,
         },
         {
-            name : "DẦU ĂN",
-            sub:[],
+            name : "DẦU ĂN, NƯỚC CHẤM, GIA VỊ",
+            sub:['Dầu ăn','Đường các loại','Hạt nêm,bột ngọt,bột canh'],
             id: 6,
         },
         {
             name : "SỮA CÁC LOẠI",
-            sub:[],
+            sub:['Sữa tươi','Sữa chua uống liền','Sữa hạt,đậu,lúa mạch, ngũ cốc'],
             id: 7,
         },
         {
             name : "BIA, NƯỚC GIẢI KHÁT",
-            sub:[],
+            sub:['Bia,nước có cồn','Rượu các loại','Nước tăng lực,bù khoáng'],
             id: 8,
         },
         {
             name : "BÁNH KẸO",
-            sub:[],
+            sub:['Bánh quy,bánh xốp','Bánh tươi,bánh mềm','Kẹo,mứt,thạch các loại'],
             id: 9,
         },
         {
             name : "SẢN PHẨM CHO MẸ VÀ BÉ",
-            sub:[],
+            sub:['Dầu tắm-gội cho bé','Giặt-xả cho bé','Bình sữa,khăn sữa, đồ chơi...'],
             id: 10,
         },
     ]
@@ -74,8 +74,8 @@ const Header = () => {
                             </li>
                             {list.map( item =>
                             <li key={item.id}>
-                                <a href={item.name} data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">{item.name}</a>
-                                <ul className="collapse list-unstyled" id={item.name}>
+                                <a href={`#${item.id}`} data-toggle="collapse" aria-expanded="false" className="dropdown-toggle"><b>{item.name}</b></a>
+                                <ul className="collapse list-unstyled" id= {item.id}>
                                     <li>
                                         <a href="#">{item.sub[0]}</a>
                                     </li>
@@ -84,9 +84,6 @@ const Header = () => {
                                     </li>
                                     <li>
                                         <a href="#">{item.sub[2]}</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">{item.sub[3]}</a>
                                     </li>
                                 </ul>
                             </li>)}
@@ -105,7 +102,7 @@ const Header = () => {
                         <li><a href="#">Miền Nam</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><span className="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng</a></li>
+                <li><a href="#"><span className="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng<span class="badge badge-pill badge-warning">3</span></a></li>
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                     <li><a href="#"><span className="glyphicon glyphicon-user"></span><Link style={padding} to="/login">Đăng nhập</Link></a></li>

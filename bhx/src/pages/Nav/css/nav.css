@@ -2,6 +2,8 @@
 	background-color: white;
 	margin-left: 1px;
 	min-width: 970px;
+	padding-left: 10px;
+	border-radius: 4px;
 }
 
 .row.featured__filter a {
@@ -11,8 +13,16 @@
     padding: 0 5px;
 	width: 120px;
 }
-
+.featured__item__text{
+	text-align: center;
+}
+.featured__item__pic img{
+	display: block; 
+	margin-left: 10px; 
+	margin-right: auto;
+}
 .col-lg-1 {
     width: 10.5%;
+	bottom: 8px;
 }
 

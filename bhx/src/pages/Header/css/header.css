@@ -32,6 +32,9 @@ a,
 a:hover {
   text-decoration: none;
 }
+h3{
+  font-size: 17px;
+}
 
 /* a:hover {
   color: var(--primary-color) !important;
@@ -40,10 +43,7 @@ a:hover {
 	padding-bottom: 50px;
 }
 
-.hero.hero-normal {
-	padding-bottom: 30px;
-}
-.hero.hero-normal .hero__categories {
+.hero__categories {
 	position: relative;
 }
 
@@ -56,16 +56,13 @@ a:hover {
 	z-index: 9;
 	background: #ffffff;
 }
-.hero.hero-normal .hero__search {
-	margin-bottom: 0;
-}
 
 .hero__categories ul.components {
   padding: 20px 0;
 }
 
 .hero__categories ul li a {
-  padding: 10px;
+  padding: 10px 10px 10px 15px;
   font-size: 1.1em;
   display: block;
 }
@@ -91,10 +88,11 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
 a[aria-expanded="true"]::before {
   content: '\e260';
 }
+
 .hero__categories__all {
 	background:#ffffff;
 	position: relative;
-	padding: 10px 25px 10px 40px;
+	padding: 12px 15px 6px 12px;
 	cursor: pointer;
   top: 10px;
   border-radius: 5px 5px 0 0;
