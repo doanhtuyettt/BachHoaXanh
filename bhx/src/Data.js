@@ -40,7 +40,7 @@ const list = [
         id: 8,
     },
     {
-        name: "BÁNH KẸO",
+        name: "BÁNH KẸO CÁC LOẠI",
         sub: ['Bánh quy,bánh xốp', 'Bánh tươi,bánh mềm', 'Kẹo,mứt,thạch các loại'],
         id: 9,
     },

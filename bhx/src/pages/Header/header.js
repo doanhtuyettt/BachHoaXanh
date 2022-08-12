@@ -9,7 +9,7 @@ const Header = () => {
     const padding = {
         padding: 15
     };
-    const { state } = useContext(ProductContext);
+    const {cartItems } = useContext(ProductContext);
     return (
         <nav className="navbar navbar-expand-lg navigation-wrap">
             <div className="container-fluid">
@@ -55,8 +55,8 @@ const Header = () => {
                     </ul>
                 </li>
                 <li><Link style={padding} to="/cart"><span className="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
-                    {state.cart.length > 0 && (
-                    <span className="badge">{state.cart.length}</span>)}
+                    {cartItems.length > 0 && (
+                    <span className="badge">{cartItems.length}</span>)}
                 </Link></li>
                 </ul>
                 <ul className="nav navbar-nav navbar-right">

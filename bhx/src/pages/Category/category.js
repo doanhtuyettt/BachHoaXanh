@@ -1,20 +1,21 @@
 import React from "react";
 import './css/category.css'
-import Product from "../Product/product";
+import Cate from "../Cate/cate";
 import { products } from "../../Data";
 
 const Category =() =>{
-   
+  
     return(
         <section id="products">
             <div className="container">
                 <div className="row product">
                     <h3 className="hometitle">SẢN PHẨM MỚI</h3>
                     {products.filter((product) => {
-                        return product.newProduct === 'true'
-                    }).map(item =>
+                        return product.newProduct;
+                    }).map( (item) =>
                     <div className="col-lg-3" id="card" key={item.id}>
                         <div className="card">
+                            {console.log(item)}
                             <img className="card-img-top" alt='image' src={item.image}/>
                             <div className="card-body">
                                 <h5>{item.name}</h5>
@@ -28,9 +29,10 @@ const Category =() =>{
                     </div>)}
                 </div>
             </div>
-            {products.filter((product) => {return product.type === 'BÁNH KẸO CÁC LOẠI'}).map(({type}) => <Product type={type}/>)}
-            {products.filter((product) => {return product.type === 'BIA, NƯỚC GIẢI KHÁT'}).map(({type}) => <Product type={type}/>)}
-            {products.filter((product) => {return product.type === 'THỊT, CÁ, TRỨNG, HẢI SẢN'}).map(({type}) => <Product type={type}/>)}
+            <Cate type = 'BÁNH KẸO CÁC LOẠI' />
+            <Cate type = 'THỊT, CÁ, TRỨNG, HẢI SẢN' />
+            <Cate type = 'BIA, NƯỚC GIẢI KHÁT' />
+    
 
         </section>
     )

@@ -1,45 +1,45 @@
-import React, { createContext, useReducer } from "react";
-import {products} from '../../Data'
-
-const initialState = {
-  products,
-  cart: [],
-  totalPrice: 0
-};
-
-const reduce = (state, action) => {
-  switch (action.type) {
-    case "ADD_TO_CART": {
-      const hasProduct = state.cart.find(
-        (product) => product.id === action.payload
-      );
-      if (!hasProduct) {
-        const mainItem = state.products.find(
-          (product) => product.id === action.payload
-        );
-        state.cart.push(mainItem);
-      }
-
-      return {
-        ...state,
-      };
-    }
-    
-    default:
-      return state;
-  }
-};
+import React, { createContext, useState } from "react";
+import { products } from "../../Data";
 
 export const ProductContext = createContext();
-export const ProductDispath = createContext();
 
 export default function ContextProvider({ children }) {
-  const [state, dispath] = useReducer(reduce, initialState);
+  const [cartItems,setCartItems] = useState([])
+  const onAdd =(product) =>{
+    console.log(cartItems)
+    const exist = cartItems.find((x) => x.id === product.id);
+        if (exist) {
+          setCartItems(
+            cartItems.map((x) =>
+              x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+            )
+          );
+        } else {
+          setCartItems([...cartItems, { ...product, qty: 1 }]);
+        }
+  };
+  const onRemove =(product) =>{
+    const exist = cartItems.find((x) => x.id === product.id);
+        if (exist) {
+          setCartItems(
+            cartItems.map((x) =>
+              x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+            )
+          );
+        } else {
+          setCartItems([...cartItems, { ...product, qty: 0 }]);
+        }
+  };
+  const value ={
+    cartItems,
+    onAdd,
+    onRemove,
+    products
+  }
+
   return (
-    <ProductContext.Provider value={{ state }}>
-      <ProductDispath.Provider value={{ dispath }}>
+    <ProductContext.Provider value={value}>
         {children}
-      </ProductDispath.Provider>
     </ProductContext.Provider>
   );
 }

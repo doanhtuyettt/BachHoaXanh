@@ -1,18 +1,21 @@
+import React from 'react';
+import { useContext } from 'react';
+import { ProductContext } from '../../context/ContextProvider';
 
-const CartItem =(props) =>{
+const CartItem =({product}) =>{
+    const {onAdd, onRemove} = useContext(ProductContext)
     const style = {
         color : 'blue'
     }
     return(
         <>
-        {console.log(props)}
-            <div className="item"><img src ={props.products.image}/></div>
-            <div className='infor'><p class="card-text">{props.products.name}</p></div>
-            <div class="quantity">
+            <div className="item"><img src ={product.image}/></div>
+            <div className='infor'><p class="card-text">{product.name}</p></div>
+            <div className="quantity">
                 <div class="quantitynum">
-                    <i class="noselect nochange">-</i> 
-                    <input autocomplete="off" type="number" min="0" max="50" class="qty"/> 
-                    <i class="noselect">+</i>
+                    <button className="noselect nochange" onClick={() => onRemove(product)}>-</button> 
+                    <input autocomplete="off" type="number" min="0" max="50" className="qty"></input> 
+                    <button className="noselect" onClick={() => onAdd(product)}>+</button>
                 </div> 
                 <a class="delete" style={style}>Xóa</a> 
             </div>
