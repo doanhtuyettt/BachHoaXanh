@@ -1,0 +1,77 @@
+.boxfooter {
+    display: block;
+    overflow: hidden;
+    width: 1155px;
+    margin: 0 auto;
+    padding: 10px 0 10px 185px;
+    max-height: 112px ;
+}
+.benefit{
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    padding: 16px 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.benefit>a {
+    border-left: 1px solid #ccc;
+    color: #000;
+}
+.benefit>div, .benefit>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 24px;
+    vertical-align: middle;
+}
+.detail .callcenter {
+    font-size: 14px;
+    font-weight: 700;
+}
+.callcenter {
+    display: block;
+    overflow: hidden;
+    padding: 10px 10px 5px;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #008848;
+}
+.detail .stores>div:first-child a, .detail .stores>div:nth-child(2) a {
+    vertical-align: middle;
+}
+.stores{
+    text-align: center;
+}
+.purchaselink {
+    color: #008848;
+   
+    
+}
+.purchaselink a{
+    padding: 0px 15px;
+    
+}
+
+.boxfooter aside {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.copyright {
+    display: block;
+    margin: auto;
+    font-size: 10px;
+    color: #999;
+    text-align: center;
+    background: #e9edf0;
+    padding: 5px 0;
+    width: 1155px;
+    margin: 0 auto;
+    padding: 10px 0 10px 185px;
+}

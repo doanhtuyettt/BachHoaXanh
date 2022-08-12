@@ -1,28 +1,20 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import '../css/login.css'
+// import {Link} from "react-router-dom";
 
 function LoginContents(){
     return(
-        <>
-          <div className="wrap lg_contents">
-            <div className="container">
-              <h3 className="title">Đăng nhập</h3>
-              <div className="lg-box">
-                <input type="text" placeholder="ID" className="login-id"/>
-                <input type="password" placeholder="PASSWORD" className="login-pw"/>
-              </div>
-    
-              <div className="bt-box">
-                <button type="button" className="bt">
-                  Đăng nhập
-                </button>
-                <Link to="/signin" className="bt">
-                  Đăng ký
-                </Link>
-              </div>
+      <div className='loginForm'>
+        <form>
+          <div class="input-group js-float-label-wrapper">
+                
+                <h2>ĐĂNG NHẬP</h2>
+                <i class="icon-phone"></i>
+                <input id="phone" maxlength="10" name="Phone" placeholder="Nhập số điện thoại" type="tel" value=""/>
+                <input id="objectId" name="objectId" placeholder="Nhập mật khẩu"/>
             </div>
-          </div>
-        </>
+        </form>
+      </div>
       )
     }
     

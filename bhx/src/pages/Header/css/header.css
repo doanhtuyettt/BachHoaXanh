@@ -17,10 +17,10 @@
 :root {
   --primary-color: #008848;
   --secondry-color: #43121d;
-  --third-color: #f98169;
+  --third-color: #0081bd;;
   --white-color: #fff;
-  --text-color: #555;
-  --text-gray: #999;
+  --text-color: #999;
+  --bg-color: #e9edf0;
   --black-color: #000;
   --primary-font: 'Roboto', sans-serif;
   --secondry-font: 'Quicksand', sans-serif;
@@ -36,9 +36,7 @@ h3{
   font-size: 17px;
 }
 
-/* a:hover {
-  color: var(--primary-color) !important;
-} */
+
 .hero {
 	padding-bottom: 50px;
 }
@@ -142,17 +140,27 @@ a[aria-expanded="true"]::before {
 }
 
 .navbar{
+  /* position: fixed;
+  display: flex;
+  z-index: 1;
+  width: 100%; 
+  margin: auto;
+  top: 0; */
   height: 60px;
   border-radius: 0;
   background-color: var(--primary-color);
 }
-.navbar-brand{
+
+.navbar-header{
   padding: 0;
 }
 
-.navbar-brand img{
+.navbar-header img{
   width: 180px;
 
+}
+.glyphicon{
+  margin-right: 5px;
 }
 form {
   display: flex;
@@ -178,6 +186,9 @@ form input {
 
 .btn{
   height: 40px;
+}
+.badge{
+  background-color: rgb(224, 31, 31);
 }
 /* 
 

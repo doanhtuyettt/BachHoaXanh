@@ -1,0 +1,16 @@
+.loginForm{
+    background: #fff;
+    width: 60%;
+    position: relative;
+    min-height: calc(100vh - 344px);
+    box-sizing: border-box;
+    display: block;
+    padding: 20px 20px;
+    margin: 30px 30%;
+}
+.icon-phone{
+    background-position: -160px -216px;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}

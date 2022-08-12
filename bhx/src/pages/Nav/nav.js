@@ -1,53 +1,17 @@
 import React from "react";
 import './css/nav.css';
-import Product from "../Product/product";
+import Category from "../Category/category";
+import { data } from "../../Data";
 
 const Nav = () =>{
     const img = {
         width :45    
     }
-    const data =[
-        {
-            content : 'Thịt heo các loại',
-            image : require('../assets/image/thit-heo.png')
-        },
-        {
-            content : 'Kem các loại',
-            image : require('../assets/image/kem.png')
-        },
-        {
-            content:'Giấy vệ sinh',
-            image:require('../assets/image/giay.png')
-        },
-        {
-            content:'Nước giặt',
-            image:require('../assets/image/nuoc-giat.png')
-        },
-        {
-            content:'Mì ăn liền',
-            image:require('../assets/image/mi.png')
-        },
-        {
-            content:'Nước mắm',
-            image:require('../assets/image/nuoc-mam.png')
-        },
-        {
-            content:'Nước ngọt',
-            image:require('../assets/image/nuoc-ngot.png')
-        },
-        {
-            content:'Rau củ,trái cây',
-            image:require('../assets/image/rau-cu.png')
-        },
-        {
-            content:'Sữa tươi',
-            image:require('../assets/image/sua.png')
-        }
-    ]
+    
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-10">
                   <div id="myCarousel" className="carousel slide" data-ride="carousel">
                     <ol className="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
@@ -79,10 +43,10 @@ const Nav = () =>{
                     <div className="row featured__filter" >
                         <h4>Nhóm hàng thường mua</h4>
                         {data.map(item =>
-                        <div className="col-lg-1 mix">
+                        <div className="col-lg-1 mix" key={item.id}>
                             <div className="featured__item">
                                 <div className="featured__item__pic ">
-                                    <img src={item.image} style={img}/>
+                                    <img src={item.image} alt='image' style={img}/>
                                 </div>
                                 <div className="featured__item__text">
                                     <a href="#">{item.content}</a>
@@ -91,7 +55,7 @@ const Nav = () =>{
                         </div>)}
                     </div>
                     <br />
-                    <Product />
+                    <Category />
                 </div>
             </div>    
         </div>

@@ -1,0 +1,79 @@
+.row.product{
+    max-width: 970px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.row.product h3{
+    color: var(--third-color);
+    padding-left: 10px;
+
+}
+.butn{
+    display: block;
+    overflow: hidden;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+}
+.butn:hover{
+    color: #fff;
+    background-color:var(--primary-color);
+}
+#card{
+    border-right: 1px solid rgb(221, 221, 221);
+    border-bottom:1px solid rgb(221, 221, 221);
+    background-color:var(--white-color);
+}
+
+.card img{
+    max-width: 160px;
+    min-height:160px;
+}
+.card-body{
+    padding: 8px 8px 8px 8px;
+    width: 213px;
+    height:137px;
+}
+
+.sign{
+    width: 25px;
+    height: 25px;
+}
+.discount{
+    background-color: red;
+    color: rgb(229, 229, 165);
+    border-radius: 10px;
+    height: 25px;
+    width: 35px;
+    text-align: center;
+    position: absolute;
+    top: 2%;
+}
+#sale{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 3px;
+    background: #de2000;
+    width: 32px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 2px;
+}
+
+span.price{
+    color: #df4024;
+}
