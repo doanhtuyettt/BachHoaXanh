@@ -36,6 +36,13 @@
 .quantitynum {
     overflow: hidden;
 }
+
+.quantitynum p{
+    color: rgb(85, 85, 135);
+    float: right;
+    text-align: right;
+    width: 80px
+}
 .quantitynum button.nochange {
     background: #fff;
 }
@@ -63,20 +70,19 @@
     background: linear-gradient(#fff,#f7f7f7);
     font-style: normal;
 }
-.quantitynum .qty {
+.quantitynum .quantity {
     float: left;
     padding: 0 5px;
-    width: 22px;
+    width: 30px;
     border: 1px solid #ededed;
     text-align: center;
     height: 26px;
     line-height: 26px;
     box-shadow: 0;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
     font-size: 14px;
     border-radius: 0;
 }
+
 .card-bodies .item a {
     overflow: hidden;
 }
@@ -99,7 +105,7 @@
 }
 .remove{
     font-size: 14px;
-    color: rgb(132, 154, 210) !important;
+    color: rgb(86, 103, 145) !important;
     text-align: center;
     background-color: white;
     cursor: pointer;

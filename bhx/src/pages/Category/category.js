@@ -15,7 +15,6 @@ const Category =() =>{
                     }).map( (item) =>
                     <div className="col-lg-3" id="card" key={item.id}>
                         <div className="card">
-                            {console.log(item)}
                             <img className="card-img-top" alt='image' src={item.image}/>
                             <div className="card-body">
                                 <h5>{item.name}</h5>

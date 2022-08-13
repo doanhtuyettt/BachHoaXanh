@@ -2,11 +2,15 @@ import Header from "../Header/header";
 import './css/cart.css';
 import React, { useContext } from "react";
 import CartItem from "./template/CartItem";
-import { ProductContext } from "../context/ContextProvider";
+import { ProductContext } from "../Context/ContextProvider";
 
 const CartContainer = () =>{
-    const { CartItems } = useContext(ProductContext);
-
+    const { cartItems } = useContext(ProductContext);
+    const itemsPrice = cartItems.reduce((sum, b) => sum + b.qty * b.price, 0);
+    console.log(itemsPrice)
+    const shippingPrice = itemsPrice > 500000 ? 0 : 15000;
+    const totalPrice = itemsPrice + shippingPrice;
+    console.log(cartItems)
     return(
         <div>
             <Header />
@@ -14,28 +18,29 @@ const CartContainer = () =>{
                 <div class="card-header">
                     Giỏ hàng của bạn
                 </div>
-                {CartItems.length > 0 ? (
+                {cartItems.length > 0 ? (
                 <div class="card-bodies">
                     <h5 class="card-title">HÀNG CÓ SẴN</h5>
-                    {CartItems.map((product) => (
+                    {cartItems.map((product) => (
                         <CartItem key={product.id} product={product} />
                     ))}   
                 </div>
                 ) : (
-                    <div className="favorite_empty">
+                <div className="favorite_empty">
                     <h5 class="card-title">HÀNG CÓ SẴN</h5>
-                      <img
+                    <img
                         src ={require('../../assets/image/empty-cart.png')}
                         alt="khong co san pham"
-                      />
-                      <span className="favorite_empty_title"> Giỏ hàng trống</span>
-                    </div>
-                  )}
+                    />
+                    <span className="favorite_empty_title"> Giỏ hàng trống</span>
+                </div>
+                )}
                 <br/>
                 <div class="card-bodies">
-                    <h5 class="card-text text-right">Tiền hàng :</h5>
-                    <p class="card-text text-right">Phí giao hàng :</p>
-                    <p class="card-text text-right">Tổng cộng :</p>
+                    <h5 class="card-text text-right">Tiền hàng : {itemsPrice}</h5>
+                    {console.log(cartItems)}
+                    <p class="card-text text-right">Phí giao hàng : {shippingPrice}</p>
+                    <p class="card-text text-right">Tổng cộng : {totalPrice}</p>
                     <a href="#" className="btncart">ĐẶT HÀNG</a>
                     <a href="#" className="remove">XÓA GIỎ HÀNG</a>
                 </div>

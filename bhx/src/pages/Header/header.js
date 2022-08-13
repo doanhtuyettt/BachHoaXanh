@@ -2,14 +2,14 @@ import React from 'react';
 import './css/header.css'
 import { Link } from 'react-router-dom';
 import { list } from '../../Data';
-import { ProductContext } from '../context/ContextProvider';
+import { ProductContext } from '../Context/ContextProvider';
 import { useContext } from 'react';
 
 const Header = () => {
     const padding = {
         padding: 15
     };
-    const {cartItems } = useContext(ProductContext);
+    const {cartItems,search} = useContext(ProductContext);
     return (
         <nav className="navbar navbar-expand-lg navigation-wrap">
             <div className="container-fluid">
@@ -64,7 +64,7 @@ const Header = () => {
                     <li><Link style={padding} to="/signin"><span className="glyphicon glyphicon-log-in"></span>Đăng ký</Link></li>
                 </ul>
                 <form>
-                    <input type="text" placeholder="Tìm kiếm món hàng tại đây ..."/>
+                    <input type="text" placeholder="Tìm kiếm món hàng tại đây ..." onChange={(e) => search(e.target.value)}/>
                     <div className="input-group-btn">
                         <button className="btn btn-default" type="submit">
                             <i className="glyphicon glyphicon-search"></i>

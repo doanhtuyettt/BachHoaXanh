@@ -10,7 +10,7 @@ const list = [
         id: 2,
     },
     {
-        name: "THỰC PHẨM ĐÔNG-MÁT",
+        name: "THỰC PHẨM  ÔNG-MÁT",
         sub: ['Kem các loại', 'Xúc xích,lạp xưởng,chả lụa,cá-bò viên', 'Há cảo, sủi cảo'],
         id: 3,
     },
@@ -20,18 +20,18 @@ const list = [
         id: 4,
     },
     {
-        name: "GẠO, BỘT, ĐỒ KHÔ",
-        sub: ['Gạo,bột các loại', 'Đồ hộp các loại', 'Đồ chay'],
+        name: "GẠO, BỘT,  Ồ KHÔ",
+        sub: ['Gạo,bột các loại', ' ồ hộp các loại', ' ồ chay'],
         id: 5,
     },
     {
         name: "DẦU ĂN, NƯỚC CHẤM",
-        sub: ['Dầu ăn', 'Đường các loại', 'Hạt nêm,bột ngọt,bột canh'],
+        sub: ['Dầu ăn', ' ường các loại', 'Hạt nêm,bột ngọt,bột canh'],
         id: 6,
     },
     {
         name: "SỮA CÁC LOẠI",
-        sub: ['Sữa tươi', 'Sữa chua uống liền', 'Sữa hạt,đậu,lúa mạch, ngũ cốc'],
+        sub: ['Sữa tươi', 'Sữa chua uống liền', 'Sữa hạt, ậu,lúa mạch, ngũ cốc'],
         id: 7,
     },
     {
@@ -46,7 +46,7 @@ const list = [
     },
     {
         name: "SẢN PHẨM CHO MẸ VÀ BÉ",
-        sub: ['Dầu tắm-gội cho bé', 'Giặt-xả cho bé', 'Bình sữa,khăn sữa, đồ chơi...'],
+        sub: ['Dầu tắm-gội cho bé', 'Giặt-xả cho bé', 'Bình sữa,khăn sữa,  ồ chơi...'],
         id: 10,
     },
 ];
@@ -103,15 +103,15 @@ const products = [
     {
         name: 'Bánh xốp nhân phô mai Nabati hộp 340g',
         image: require('../src/assets/image/banh-xop-nhan-pho-mai.png'),
-        price: ' 39.000đ',
+        price: ' 39000 ',
         sale: '-15%',
         id: 20,
         newProduct: true
     },
     {
-        name: 'Sữa tươi có đường Vinamilk Happy Star bịch 220ml',
+        name: 'Sữa tươi có  ường Vinamilk Happy Star bịch 220ml',
         image: require('../src/assets/image/sua-dinh-duong.png'),
-        price: ' 5.200đ',
+        price: ' 5000 ',
         sale: '-21%',
         id: 21,
         newProduct: true
@@ -119,7 +119,7 @@ const products = [
     {
         name: 'Hạt nêm chay nấm hương Knor gói 170g',
         image: require('../src/assets/image/hat-nem.png'),
-        price: ' 30.000đ',
+        price: ' 30000 ',
         sale: '-24%',
         id: 22,
         newProduct: true
@@ -127,7 +127,7 @@ const products = [
     {
         name: 'Đường tinh luyện Lin gói 1kg',
         image: require('../src/assets/image/duong-tin.png'),
-        price: ' 10.000đ',
+        price: ' 10000 ',
         sale: '-24%',
         id: 23,
         newProduct: true
@@ -135,7 +135,7 @@ const products = [
     {
         name: 'Nấm hải sản',
         image: require('../src/assets/image/nam-hai-san.png'),
-        price: ' 30.000đ',
+        price: ' 30000 ',
         sale: '-24%',
         id: 24,
         newProduct: true
@@ -143,7 +143,7 @@ const products = [
     {
         name: 'Miến Phú Hương sườn 58g',
         image: require('../src/assets/image/mien-phu-huong.png'),
-        price: ' 30.000đ',
+        price: ' 30000 ',
         sale: '-24%',
         id: 25,
         newProduct: true
@@ -151,7 +151,7 @@ const products = [
     {
         name: 'Sữa chua TH True Yogurt',
         image: require('../src/assets/image/sua-chua.png'),
-        price: ' 30.000đ',
+        price: ' 30000 ',
         sale: '-24%',
         id: 26,
         newProduct: true
@@ -159,7 +159,7 @@ const products = [
     {
         name: 'Chả giò chay cao cấp nấm kim châm Phi Long hộp 500g',
         image: require('../src/assets/image/cha-gio-chay.png'),
-        price: ' 30.000đ',
+        price: ' 30000 ',
         sale: '-24%',
         id: 27,
         newProduct: true
@@ -167,7 +167,7 @@ const products = [
     {
         name: 'Bánh xquy bơ Danisa hộp 340g',
         image: require('../src/assets/image/banh-danisa.png'),
-        price: ' 39.000đ',
+        price: ' 39000 ',
         sale: '-15%',
         id: 28,
         type: "BÁNH KẸO CÁC LOẠI"
@@ -175,7 +175,7 @@ const products = [
     {
         name: 'Mít sấy Rộp Rộp gói 250g',
         image: require('../src/assets/image/mit.png'),
-        price: ' 5.200đ',
+        price: ' 54000 ',
         sale: '-21%',
         id: 29,
         type: "BÁNH KẸO CÁC LOẠI"
@@ -183,7 +183,7 @@ const products = [
     {
         name: 'Trái cây sấy giòn Vinamit gói 270g',
         image: require('../src/assets/image/trai-cay.png'),
-        price: ' 30.000đ',
+        price: ' 30000 ',
         sale: '-24%',
         id: 30,
         type: "BÁNH KẸO CÁC LOẠI"
@@ -191,7 +191,7 @@ const products = [
     {
         name: 'Bánh quy bơ LU hộp 500g',
         image: require('../src/assets/image/banh-quy.png'),
-        price: ' 30.000đ',
+        price: ' 30000 ',
         sale: '-24%',
         id: 38,
         type: "BÁNH KẸO CÁC LOẠI"
@@ -200,7 +200,7 @@ const products = [
     {
         name: 'Thùng bia 24 chai Hoegaarden 330ml',
         image: require('../src/assets/image/bia-1.png'),
-        price: ' 630.000đ',
+        price: ' 630000 ',
         sale: '-24%',
         id: 31,
         type: 'BIA, NƯỚC GIẢI KHÁT'
@@ -208,7 +208,7 @@ const products = [
     {
         name: 'Khay 24 lon bia Heineken Silver 330ml',
         image: require('../src/assets/image/bia-2.png'),
-        price: ' 439.000đ',
+        price: ' 439000 ',
         sale: '-15%',
         id: 32,
         type: 'BIA, NƯỚC GIẢI KHÁT'
@@ -216,7 +216,7 @@ const products = [
     {
         name: 'Khay 24 lon bia Heineken Sleek 330ml',
         image: require('../src/assets/image/bia-3.png'),
-        price: ' 445.200đ',
+        price: ' 445000 ',
         sale: '-21%',
         id: 33,
         type: 'BIA, NƯỚC GIẢI KHÁT'
@@ -224,7 +224,7 @@ const products = [
     {
         name: 'Thùng 24 lon bia Tiger Crystal 330ml',
         image: require('../src/assets/image/bia-4.png'),
-        price: ' 410.000đ',
+        price: ' 410000 ',
         sale: '-24%',
         id: 34,
         type: 'BIA, NƯỚC GIẢI KHÁT'
@@ -233,15 +233,15 @@ const products = [
     {
         name: 'Cá basa cắt khúc khay 500g',
         image: require('../src/assets/image/ca-basa.png'),
-        price: ' 630.000đ',
+        price: ' 630000 ',
         sale: '-24%',
         id: 35,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
     },
     {
-        name: 'Ba rọi heo nhập khẩu đông lạnh 500g',
+        name: 'Ba rọi heo nhập khẩu  ông lạnh 500g',
         image: require('../src/assets/image/ba-roi.png'),
-        price: ' 439.000đ',
+        price: ' 439000 ',
         sale: '-15%',
         id: 36,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
@@ -249,7 +249,7 @@ const products = [
     {
         name: 'Cá nục bông hấp vỉ 300g',
         image: require('../src/assets/image/ca-nuc.png'),
-        price: ' 445.200đ',
+        price: ' 445000 ',
         sale: '-21%',
         id: 37,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
@@ -257,7 +257,7 @@ const products = [
     {
         name: 'Hộp trứng vịt xanh 4KFarm',
         image: require('../src/assets/image/hop-trung.png'),
-        price: ' 410.000đ',
+        price: ' 410000 ',
         sale: '-24%',
         id: 39,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',

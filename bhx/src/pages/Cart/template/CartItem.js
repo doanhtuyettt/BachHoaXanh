@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { ProductContext } from '../../context/ContextProvider';
+import { ProductContext } from '../../Context/ContextProvider';
 
 const CartItem =({product}) =>{
     const {onAdd, onRemove} = useContext(ProductContext)
@@ -12,12 +12,13 @@ const CartItem =({product}) =>{
             <div className="item"><img src ={product.image}/></div>
             <div className='infor'><p class="card-text">{product.name}</p></div>
             <div className="quantity">
-                <div class="quantitynum">
+                <div className="quantitynum">
                     <button className="noselect nochange" onClick={() => onRemove(product)}>-</button> 
-                    <input autocomplete="off" type="number" min="0" max="50" className="qty"></input> 
+                    <input value={product.qty} className='quantity'/> 
                     <button className="noselect" onClick={() => onAdd(product)}>+</button>
+                    <p>{product.qty} x {product.price}</p>
                 </div> 
-                <a class="delete" style={style}>Xóa</a> 
+                <a className="delete" style={style}>Xóa</a> 
             </div>
         </>
     )

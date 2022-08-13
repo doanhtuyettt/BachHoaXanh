@@ -1,7 +1,7 @@
 import React from "react";
 import './css/product.css';
 import { useContext } from "react";
-import { ProductContext } from "../context/ContextProvider";
+import { ProductContext } from "../Context/ContextProvider";
 
 const Product =({item}) =>{
     const {onAdd} = useContext(ProductContext)
@@ -14,7 +14,7 @@ const Product =({item}) =>{
                         <h5>{item.name}</h5>
                         <div className="d-flex flex-row my-2">
                             <div className="text-muted price"><del>33.000đ</del>{item.price}<label id="sale">{item.sale}</label></div>                   
-                        </div>                         
+                        </div>                     
                         <button className="butn w-100" onClick={() => onAdd(item)} >CHỌN MUA</button>
                     </div>
                 </div>

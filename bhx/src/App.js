@@ -5,7 +5,7 @@ import LoginContainer from "./pages/Login/logincontainer";
 // import SigninContainer from "./pages/Signin/signincontainer";
 import CartContainer from "./pages/Cart/cartcontainer";
 // import ItemContents from './pages/Item/template/Itemcontents';
-import ContextProvider from './pages/context/ContextProvider';
+import ContextProvider from './pages/Context/ContextProvider';
 
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 
