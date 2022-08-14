@@ -2,9 +2,11 @@ import React from "react";
 import './css/category.css'
 import Cate from "../Cate/cate";
 import { products } from "../../Data";
+import { useContext } from "react";
+import { ProductContext } from "../Context/ContextProvider";
 
 const Category =() =>{
-  
+    const {onAdd} = useContext(ProductContext)
     return(
         <section id="products">
             <div className="container">
@@ -22,7 +24,7 @@ const Category =() =>{
                                 <div className="d-flex flex-row my-2">
                                     <div className="text-muted price"><del>155.000đ</del><span className="price">{item.price}</span><label id="sale">{item.sale}</label></div>                   
                                 </div> 
-                                <button className="butn w-100">CHỌN MUA</button>      
+                                <button className="butn w-100" onClick={() => onAdd(item)}>CHỌN MUA</button>      
                             </div>
                         </div>
                     </div>)}

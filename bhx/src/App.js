@@ -6,7 +6,6 @@ import LoginContainer from "./pages/Login/logincontainer";
 import CartContainer from "./pages/Cart/cartcontainer";
 // import ItemContents from './pages/Item/template/Itemcontents';
 import ContextProvider from './pages/Context/ContextProvider';
-
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 
 

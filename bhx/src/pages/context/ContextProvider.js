@@ -1,11 +1,11 @@
 import React, { createContext, useState } from "react";
-import { products } from "../../Data";
 
 export const ProductContext = createContext();
 
 export default function ContextProvider({ children }) {
   const [cartItems,setCartItems] = useState([])
-  const [searchInput, setSearchInput] = useState('');
+  const [query, setQuery] = useState('');
+
   const onAdd =(product) =>{
     const exist = cartItems.find((x) => x.id === product.id);
         if (exist) {
@@ -31,19 +31,12 @@ export default function ContextProvider({ children }) {
     }
   };
 
-  const search = (searchValue) => {
-      setSearchInput(searchValue)
-      products.filter((item) => {
-        return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
-    })
-  }
-  
   const value ={
     cartItems,
+    query,
     onAdd,
     onRemove,
-    products,
-    search
+    setQuery
   }
 
   return (

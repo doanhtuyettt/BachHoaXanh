@@ -20,7 +20,7 @@ const list = [
         id: 4,
     },
     {
-        name: "GẠO, BỘT,  Ồ KHÔ",
+        name: "GẠO, BỘT, ĐỒ KHÔ",
         sub: ['Gạo,bột các loại', ' ồ hộp các loại', ' ồ chay'],
         id: 5,
     },

@@ -1,16 +1,63 @@
-.loginForm{
-    background: #fff;
-    width: 60%;
+.card-form{
+    padding: 5px 10px;
     position: relative;
-    min-height: calc(100vh - 344px);
-    box-sizing: border-box;
-    display: block;
-    padding: 20px 20px;
-    margin: 30px 30%;
+    max-width: 1500px;
+    padding-left: 40%;
+    min-height: 49px;
+    max-height: 49px;
 }
-.icon-phone{
+.card-form input{
+    margin-bottom: 10px;
+    border-radius : 5px;
+    width: 500px;
+    margin-left: 8px;
+    padding-left: 45px;
+    height: 50px;
+}
+
+.card-form p{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.btni{
+    font-weight: bold;
+    color: #fff !important;
+    text-align: center;
+    border-radius: 4px;
+    background: #008848;
+    cursor: pointer;
+    margin: 5px 10px 10px;
+    display: block;
+    padding: 15px 20px;
+    font-size: 16px;
+    width: 500px;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 25%);
+}
+.card-form .rules{
+    margin-left: 15px;
+}
+.card-form span a {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    color: #999;
+    text-align: justify;
+    
+}
+.card-form i{
+    position: absolute;
+    left: 24%;
+    font-size: 17px;
     background-position: -160px -216px;
-    width: 16px;
-    height: 16px;
+    color: rgb(93, 92, 92);
     vertical-align: sub;
+}
+.card-form i#phone{
+    top: 152%;
+}
+
+.card-form i#lock{
+    top: 275%;
 }

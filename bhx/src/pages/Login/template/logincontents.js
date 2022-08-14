@@ -4,17 +4,27 @@ import '../css/login.css'
 
 function LoginContents(){
     return(
-      <div className='loginForm'>
+      <div className='card cardnormal'>
         <form>
-          <div class="input-group js-float-label-wrapper">
-                
-                <h2>ĐĂNG NHẬP</h2>
-                <i class="icon-phone"></i>
-                <input id="phone" maxlength="10" name="Phone" placeholder="Nhập số điện thoại" type="tel" value=""/>
-                <input id="objectId" name="objectId" placeholder="Nhập mật khẩu"/>
+          <div class="card-form">
+            <p className='text-center'>ĐĂNG NHẬP</p>
+            <i className="glyphicon glyphicon-earphone" id="phone"/>
+            <input id="phone" maxlength="10" name="Phone" placeholder="Nhập số điện thoại" type="tel" value=""/>
+            <i className="glyphicon glyphicon-lock" id="lock"/>
+            <input id="pass" name="objectId" placeholder="Nhập mật khẩu"/>
+            <a href="#" className="btni">TIẾP TỤC</a>
+
+            <div className='rules'>
+              <span>Bằng cách đăng ký tài khoản, bạn đã đồng ý với 
+                <a href="#"> Điều khoản sử dụng và Chính sách bảo mật</a> của Bachoaxanh.com.
+              </span>
             </div>
-        </form>
+
+          </div>
+        </form>        
       </div>
+          
+        
       )
     }
     

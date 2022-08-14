@@ -90,7 +90,6 @@
     color: black;
 }
 .btncart {
-    font-size: 14px;
     font-weight: bold;
     color: #fff !important;
     text-align: center;
@@ -104,7 +103,6 @@
     width: calc(100% - 20px)
 }
 .remove{
-    font-size: 14px;
     color: rgb(86, 103, 145) !important;
     text-align: center;
     background-color: white;
