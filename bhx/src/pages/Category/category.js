@@ -6,7 +6,8 @@ import { useContext } from "react";
 import { ProductContext } from "../Context/ContextProvider";
 
 const Category =() =>{
-    const {onAdd} = useContext(ProductContext)
+    const {onAdd} = useContext(ProductContext);
+
     return(
         <section id="products">
             <div className="container">

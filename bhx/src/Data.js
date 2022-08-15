@@ -10,8 +10,8 @@ const list = [
         id: 2,
     },
     {
-        name: "THỰC PHẨM  ÔNG-MÁT",
-        sub: ['Kem các loại', 'Xúc xích,lạp xưởng,chả lụa,cá-bò viên', 'Há cảo, sủi cảo'],
+        name: "THỰC PHẨM ĐÔNG-MÁT",
+        sub: ['Kem các loại', 'Xúc xích,lạp xưởng,chả lụa,cá-bò viên', 'Há cảo,sủi cảo'],
         id: 3,
     },
     {
@@ -21,17 +21,17 @@ const list = [
     },
     {
         name: "GẠO, BỘT, ĐỒ KHÔ",
-        sub: ['Gạo,bột các loại', ' ồ hộp các loại', ' ồ chay'],
+        sub: ['Gạo,bột các loại', 'Đồ hộp các loại', 'Đồ chay'],
         id: 5,
     },
     {
         name: "DẦU ĂN, NƯỚC CHẤM",
-        sub: ['Dầu ăn', ' ường các loại', 'Hạt nêm,bột ngọt,bột canh'],
+        sub: ['Dầu ăn', 'Đường các loại', 'Hạt nêm,bột ngọt,bột canh'],
         id: 6,
     },
     {
         name: "SỮA CÁC LOẠI",
-        sub: ['Sữa tươi', 'Sữa chua uống liền', 'Sữa hạt, ậu,lúa mạch, ngũ cốc'],
+        sub: ['Sữa tươi', 'Sữa chua uống liền', 'Sữa hạt,đậu,lúa mạch,ngũ cốc'],
         id: 7,
     },
     {
@@ -46,9 +46,19 @@ const list = [
     },
     {
         name: "SẢN PHẨM CHO MẸ VÀ BÉ",
-        sub: ['Dầu tắm-gội cho bé', 'Giặt-xả cho bé', 'Bình sữa,khăn sữa,  ồ chơi...'],
+        sub: ['Dầu tắm-gội cho bé', 'Giặt-xả cho bé', 'Bình sữa,khăn sữa, Đồ chơi...'],
         id: 10,
     },
+    {
+        name: "ĐỒ DÙNG GIA ĐÌNH",
+        sub: ['Dầu tắm-gội cho bé', 'Giặt-xả cho bé', 'Bình sữa,khăn sữa, Đồ chơi...'],
+        id: 40,
+    },
+    {
+        name: "VỆ SINH NHÀ CỬA",
+        sub: ['Dầu tắm-gội cho bé', 'Giặt-xả cho bé', 'Bình sữa,khăn sữa, Đồ chơi...'],
+        id: 41,
+    }
 ];
 
 const data = [
@@ -109,9 +119,9 @@ const products = [
         newProduct: true
     },
     {
-        name: 'Sữa tươi có  ường Vinamilk Happy Star bịch 220ml',
+        name: 'Sữa tươi có đường Vinamilk Happy Star bịch 220ml',
         image: require('../src/assets/image/sua-dinh-duong.png'),
-        price: ' 5000 ',
+        price: ' 15000 ',
         sale: '-21%',
         id: 21,
         newProduct: true
@@ -135,7 +145,7 @@ const products = [
     {
         name: 'Nấm hải sản',
         image: require('../src/assets/image/nam-hai-san.png'),
-        price: ' 30000 ',
+        price: ' 38000 ',
         sale: '-24%',
         id: 24,
         newProduct: true
@@ -159,7 +169,7 @@ const products = [
     {
         name: 'Chả giò chay cao cấp nấm kim châm Phi Long hộp 500g',
         image: require('../src/assets/image/cha-gio-chay.png'),
-        price: ' 30000 ',
+        price: ' 60000 ',
         sale: '-24%',
         id: 27,
         newProduct: true
@@ -167,7 +177,7 @@ const products = [
     {
         name: 'Bánh xquy bơ Danisa hộp 340g',
         image: require('../src/assets/image/banh-danisa.png'),
-        price: ' 39000 ',
+        price: ' 139000 ',
         sale: '-15%',
         id: 28,
         type: "BÁNH KẸO CÁC LOẠI"
@@ -175,7 +185,7 @@ const products = [
     {
         name: 'Mít sấy Rộp Rộp gói 250g',
         image: require('../src/assets/image/mit.png'),
-        price: ' 54000 ',
+        price: ' 44000 ',
         sale: '-21%',
         id: 29,
         type: "BÁNH KẸO CÁC LOẠI"
@@ -191,18 +201,18 @@ const products = [
     {
         name: 'Bánh quy bơ LU hộp 500g',
         image: require('../src/assets/image/banh-quy.png'),
-        price: ' 30000 ',
+        price: ' 230000 ',
         sale: '-24%',
-        id: 38,
+        id: 31,
         type: "BÁNH KẸO CÁC LOẠI"
     },
 
     {
         name: 'Thùng bia 24 chai Hoegaarden 330ml',
         image: require('../src/assets/image/bia-1.png'),
-        price: ' 630000 ',
+        price: ' 430000 ',
         sale: '-24%',
-        id: 31,
+        id: 32,
         type: 'BIA, NƯỚC GIẢI KHÁT'
     },
     {
@@ -210,7 +220,7 @@ const products = [
         image: require('../src/assets/image/bia-2.png'),
         price: ' 439000 ',
         sale: '-15%',
-        id: 32,
+        id: 33,
         type: 'BIA, NƯỚC GIẢI KHÁT'
     },
     {
@@ -218,7 +228,7 @@ const products = [
         image: require('../src/assets/image/bia-3.png'),
         price: ' 445000 ',
         sale: '-21%',
-        id: 33,
+        id: 34,
         type: 'BIA, NƯỚC GIẢI KHÁT'
     },
     {
@@ -226,43 +236,65 @@ const products = [
         image: require('../src/assets/image/bia-4.png'),
         price: ' 410000 ',
         sale: '-24%',
-        id: 34,
+        id: 35,
         type: 'BIA, NƯỚC GIẢI KHÁT'
     },
 
     {
         name: 'Cá basa cắt khúc khay 500g',
         image: require('../src/assets/image/ca-basa.png'),
-        price: ' 630000 ',
+        price: ' 230000 ',
         sale: '-24%',
-        id: 35,
+        id: 36,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
     },
     {
-        name: 'Ba rọi heo nhập khẩu  ông lạnh 500g',
+        name: 'Ba rọi heo nhập khẩu đông lạnh 500g',
         image: require('../src/assets/image/ba-roi.png'),
-        price: ' 439000 ',
+        price: ' 43000 ',
         sale: '-15%',
-        id: 36,
+        id: 37,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
     },
     {
         name: 'Cá nục bông hấp vỉ 300g',
         image: require('../src/assets/image/ca-nuc.png'),
-        price: ' 445000 ',
+        price: ' 145000 ',
         sale: '-21%',
-        id: 37,
+        id: 38,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
     },
     {
         name: 'Hộp trứng vịt xanh 4KFarm',
         image: require('../src/assets/image/hop-trung.png'),
-        price: ' 410000 ',
+        price: ' 60000 ',
         sale: '-24%',
         id: 39,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
     }
 ]
 
+const address = [
+    { 
+        ward : 'Cổ Nhuế 2',
+        district : 'Bắc Từ Liêm',
+        city : 'Hà Nội'
+    },
+    { 
+        ward : 'Cổ Nhuế 1',
+        district : 'Bắc Từ Liêm',
+        city : 'Hà Nội'
+    },
+    { 
+        ward : 'Xuân Đỉnh',
+        district : 'Bắc Từ Liêm',
+        city : 'Hà Nội'
+    },
+    { 
+        ward : 'Mỹ Đình',
+        district : 'Nam Từ Liêm',
+        city : 'Hà Nội'
+    },
+]
 
-export { list, data, products}
+export { list, data, products,address}

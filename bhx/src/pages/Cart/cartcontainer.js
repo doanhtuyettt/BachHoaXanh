@@ -1,33 +1,31 @@
 import Header from "../Header/header";
 import './css/cart.css';
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import CartItem from "./template/CartItem";
 import { ProductContext } from "../Context/ContextProvider";
+import PayCart from "./template/payCart";
+import { NotificationManager } from 'react-notifications';
 
 const CartContainer = () =>{
     const { cartItems } = useContext(ProductContext);
-    const itemsPrice = cartItems.reduce((sum, b) => sum + b.qty * b.price, 0);
-    console.log(itemsPrice)
-    const shippingPrice = itemsPrice > 500000 ? 0 : 15000;
-    const totalPrice = itemsPrice + shippingPrice;
-    console.log(cartItems)
     return(
         <div>
             <Header />
-            <div class="card cardnormal">
-                <div class="card-header">
+            <div className="card cardnormal">
+                <div className="card-header">
                     Giỏ hàng của bạn
                 </div>
                 {cartItems.length > 0 ? (
-                <div class="card-bodies">
-                    <h5 class="card-title">HÀNG CÓ SẴN</h5>
+                <div className="card-bodies">
+                    <h5 className="card-title">HÀNG CÓ SẴN</h5>
                     {cartItems.map((product) => (
                         <CartItem key={product.id} product={product} />
                     ))}   
                 </div>
                 ) : (
                 <div className="favorite_empty">
-                    <h5 class="card-title">HÀNG CÓ SẴN</h5>
+                    <h5 className="card-title">HÀNG CÓ SẴN</h5>
                     <img
                         src ={require('../../assets/image/empty-cart.png')}
                         alt="khong co san pham"
@@ -36,14 +34,11 @@ const CartContainer = () =>{
                 </div>
                 )}
                 <br/>
-                <div class="card-bodies">
-                    <h5 class="card-text text-right">Tiền hàng : {itemsPrice}</h5>
-                    {console.log(cartItems)}
-                    <p class="card-text text-right">Phí giao hàng : {shippingPrice}</p>
-                    <p class="card-text text-right">Tổng cộng : {totalPrice}</p>
-                    <a href="#" className="btncart">ĐẶT HÀNG</a>
-                    <a href="#" className="remove">XÓA GIỎ HÀNG</a>
-                </div>
+                <PayCart />
+                {cartItems.length != 0 
+                ? <Link to="/pay"><span href="#" className="btncart">ĐẶT HÀNG</span></Link> 
+                : <button onClick={()=>NotificationManager.error('Hãy cho sản phẩm vào giỏ hàng nhé!', 'Lỗi!')} className="btncart">ĐẶT HÀNG</button> }
+                <a href="#" className="remove">XÓA GIỎ HÀNG</a>
             </div>
         </div>
     )

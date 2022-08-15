@@ -1,3 +1,16 @@
+.container{
+	display: block;
+    width: 1155px;
+    margin: 0 auto;
+    max-height: 112px ;
+	z-index: 1;
+}
+.row .col-lg-10 {
+    padding: 0px 0 10px 37px;
+}
+.carousel{
+	width: 970px;
+}
 .row.featured__filter{
 	background-color: white;
 	margin-left: 1px;

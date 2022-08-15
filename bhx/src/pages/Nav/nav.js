@@ -2,12 +2,16 @@ import React, { useContext } from "react";
 import './css/nav.css';
 import Category from "../Category/category";
 import { data } from "../../Data";
+import { products } from "../../Data";
+import { ProductContext } from "../Context/ContextProvider";
+import Product from "../Product/product";
 
 const Nav = () =>{
     const img = {
         width :45    
     }
- 
+    const {query} = useContext(ProductContext);
+    
     return (
         <div className="container">
             <div className="row">
@@ -55,12 +59,12 @@ const Nav = () =>{
                         </div>)}
                     </div>
                     <br />
-                    {/* {products.filter((item) => item.name.toLowerCase().includes(query)).length <20 } ?
-                    {products.filter((item) => item.name.toLowerCase().includes(query)).map((item) =>(
+                    {products.filter((item) => item.name.toLowerCase().includes(query)).length <20  ?
+                    products.filter((item) => item.name.toLowerCase().includes(query.toLowerCase())).map((item) =>(
                         <Product item={item}/>
-                    ))}
-                    : */}
-                    <Category />
+                    ))
+                    :
+                    <Category />}
                 </div>
             </div>    
         </div>
