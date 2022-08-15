@@ -4,7 +4,7 @@ import '../css/login.css'
 
 function LoginContents(){
     return(
-      <div className='card cardnormal'>
+      <div className='card'>
         <form>
           <div class="card-form">
             <p className='text-center'>ĐĂNG NHẬP</p>
