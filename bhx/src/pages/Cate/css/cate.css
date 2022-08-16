@@ -1,0 +1,12 @@
+.cate{
+    min-width: 970px;
+    background-color: white;
+}
+.view p{
+    text-align: center;
+    color: #0064c2;
+    font-size: 14px;
+    padding: 10px 0;
+    margin-bottom: 0;
+    cursor: pointer;
+}

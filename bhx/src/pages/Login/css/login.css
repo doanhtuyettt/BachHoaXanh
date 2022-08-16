@@ -1,9 +1,8 @@
-.card {
-    height: 500px;
+.cards {
     background: #fff;
+    height: 400px;
     width: 62%;
     position: relative;
-    height: 500px;
     box-sizing: border-box;
     display: block;
     padding: 20px 0px;
@@ -66,9 +65,9 @@
     vertical-align: sub;
 }
 .card-form i#phone{
-    top: 152%;
+    top: 195%;
 }
 
 .card-form i#lock{
-    top: 275%;
+    top: 315%;
 }

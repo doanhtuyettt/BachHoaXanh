@@ -1,0 +1,45 @@
+input#persons{
+    width: 16px;
+    height: 20px;
+    margin-right: 3px;
+    background-size: 234px auto;
+}
+.cards.signcard{
+    height: 620px;
+}
+.card-form p{
+    margin-bottom: 30px;
+}
+.card-form #type{
+    border: 1px solid black;
+}
+.card-form i#user{
+    top: 307%;
+}
+.card-form i#phone2{
+    top: 435%;
+}
+
+.card-form i#email{
+    top: 557%;
+}
+.input-group{
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    padding: 5px 10px;
+    width: 96%;
+    margin: 0 0 10px 10px;
+}
+
+.input-group #name{
+    font-weight: lighter;
+    color: #8e8c8c;
+    padding-right: 40px;
+}
+
+.input-group label{
+    padding-right: 50px;
+}
+#Password{
+    padding: 0 20px;
+}

@@ -15,10 +15,10 @@ const Invoice = () => {
                     <form className='form-pay'>
                         <p><b>1. Thông tin người mua hàng:</b></p>
                         <br/>
-                        <input type="radio" id="male" name="fav_language" value="Anh"/>
+                        <input type="radio" id="person" name="selection" value="Anh"/>
                         <label for="male">Anh</label>
                         <br/>
-                        <input type="radio" id="female" name="fav_language" value="Chị"/>
+                        <input type="radio" id="person" name="selection" value="Chị"/>
                         <label for="female">Chị</label>
                     </form>
                     <br/>
@@ -50,13 +50,13 @@ const Invoice = () => {
                         <p><b>3. Chọn hình thức thanh toán</b></p>
                     </form>
                     <div className="pay-input">
-                        <input type="radio" id='payment'/>
+                        <input type="radio" id='payment' name="selection"/>
                         <img src={require('../../assets/image/visa.png')}/>
                         <label>Thẻ Visa,Master,JCB</label>
-                        <input type="radio" id='payment'/>
+                        <input type="radio" id='payment' name="selection"/>
                         <img src={require('../../assets/image/momo.png')}/>
                         <label>Ví Momo</label>
-                        <input type="radio" id='payment'/>
+                        <input type="radio" id='payment' name="selection"/>
                         <i className="glyphicon glyphicon-piggy-bank"/>
                         <label>Tiền mặt</label>
                     </div>

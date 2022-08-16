@@ -8,7 +8,6 @@ const Product =({item}) =>{
 
     return( 
             <div className="col-lg-3 " id="card" >
-                
                 <div className="card">
                     <img className="card-img-top" alt='image' src={item.image}/>
                     <div className="card-body">

@@ -62,7 +62,7 @@ const Header = () => {
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                     <li><Link style={padding} to="/login"><span className="glyphicon glyphicon-user"></span>Đăng nhập</Link></li>
-                    <li><Link style={padding} to="/signin"><span className="glyphicon glyphicon-log-in"></span>Đăng ký</Link></li>
+                    <li><Link style={padding} to="/signup"><span className="glyphicon glyphicon-log-in"></span>Đăng ký</Link></li>
                 </ul>
                 <form>
                     <input type="text" placeholder="Tìm kiếm món hàng tại đây ..." onChange={(e) => setQuery(e.target.value)}/>

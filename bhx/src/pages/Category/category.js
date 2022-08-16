@@ -31,11 +31,10 @@ const Category =() =>{
                     </div>)}
                 </div>
             </div>
-            <Cate type = 'BÁNH KẸO CÁC LOẠI' />
             <Cate type = 'THỊT, CÁ, TRỨNG, HẢI SẢN' />
+            <Cate type = 'RAU, CỦ, TRÁI CÂY' />
+            <Cate type = 'BÁNH KẸO CÁC LOẠI' />
             <Cate type = 'BIA, NƯỚC GIẢI KHÁT' />
-    
-
         </section>
     )
 }

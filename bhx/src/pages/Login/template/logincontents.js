@@ -4,12 +4,12 @@ import '../css/login.css'
 
 function LoginContents(){
     return(
-      <div className='card'>
+      <div className='cards'>
         <form>
           <div class="card-form">
             <p className='text-center'>ĐĂNG NHẬP</p>
             <i className="glyphicon glyphicon-earphone" id="phone"/>
-            <input id="phone" maxlength="10" name="Phone" placeholder="Nhập số điện thoại" type="tel" value=""/>
+            <input id="phone" maxlength="10" name="Phone" placeholder="Nhập số điện thoại" type="tel" />
             <i className="glyphicon glyphicon-lock" id="lock"/>
             <input id="pass" name="objectId" placeholder="Nhập mật khẩu"/>
             <a href="#" className="btni">TIẾP TỤC</a>

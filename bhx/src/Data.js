@@ -271,6 +271,38 @@ const products = [
         sale: '-24%',
         id: 39,
         type: 'THỊT, CÁ, TRỨNG, HẢI SẢN',
+    },
+    {
+        name: 'Nấm kim châm Hàn Quốc 150g',
+        image: require('../src/assets/image/nam-kim-cham.png'),
+        price: ' 145000 ',
+        sale: '-21%',
+        id: 42,
+        type: 'RAU, CỦ, TRÁI CÂY',
+    },
+    {
+        name: 'Nấm đùi gà vỉ 200g',
+        image: require('../src/assets/image/nam-dui-ga.png'),
+        price: ' 145000 ',
+        sale: '-21%',
+        id: 43,
+        type: 'RAU, CỦ, TRÁI CÂY',
+    },
+    {
+        name: 'Nho xanh nhập khẩu hộp 500g',
+        image: require('../src/assets/image/nho-xanh.png'),
+        price: ' 145000 ',
+        sale: '-21%',
+        id: 44,
+        type: 'RAU, CỦ, TRÁI CÂY',
+    },
+    {
+        name: 'Táo Dazzle nhập khẩu New Zealand túi 1kg',
+        image: require('../src/assets/image/tao.png'),
+        price: ' 145000 ',
+        sale: '-21%',
+        id: 45,
+        type: 'RAU, CỦ, TRÁI CÂY',
     }
 ]
 
