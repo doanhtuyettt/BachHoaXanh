@@ -27,11 +27,10 @@ const firebaseConfig = {
   measurementId: "G-D01S1TD08E"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
 
- 
 class App extends Component {
   render() {
       return (
@@ -41,10 +40,10 @@ class App extends Component {
             
               <Routes>
                 <Route exact path="/" element={<MainContainer />}/>
-                <Route path="/login" element={<LoginContainer auth = {auth}/>}/>
+                <Route path="/login" element={<LoginContainer />}/>
                 <Route path="/pay" element={<Invoice />}/>
                 {/* <Route path="/item/:id" component={ItemContents} />*/}
-                <Route path="/signup" element={<SignInContainer auth = {auth}/>}/>
+                <Route path="/signup" element={<SignInContainer />}/>
                 <Route path="/cart" element={<CartContainer />}/> 
               </Routes>
               <NotificationContainer/>
