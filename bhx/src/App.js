@@ -28,8 +28,8 @@ const firebaseConfig = {
 };
 
 // // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 class App extends Component {
   render() {
@@ -40,10 +40,10 @@ class App extends Component {
             
               <Routes>
                 <Route exact path="/" element={<MainContainer />}/>
-                <Route path="/login" element={<LoginContainer />}/>
+                <Route path="/login" element={<LoginContainer auth = {auth}/>}/>
                 <Route path="/pay" element={<Invoice />}/>
                 {/* <Route path="/item/:id" component={ItemContents} />*/}
-                <Route path="/signup" element={<SignInContainer />}/>
+                <Route path="/signup" element={<SignInContainer auth = {auth}/>}/>
                 <Route path="/cart" element={<CartContainer />}/> 
               </Routes>
               <NotificationContainer/>
@@ -55,3 +55,4 @@ class App extends Component {
 }
 
 export default App;
+export {auth};
