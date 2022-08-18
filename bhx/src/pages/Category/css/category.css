@@ -4,11 +4,12 @@
     border-radius: 4px;
 }
 
-.row.product h3{
+.row.product .hometitle{
     color: var(--third-color);
     padding-left: 10px;
 
 }
+
 .butn{
     display: block;
     overflow: hidden;
@@ -38,6 +39,7 @@
 .card img{
     max-width: 160px;
     min-height:160px;
+    cursor: pointer;
 }
 .card-body{
     padding: 8px 8px 8px 8px;

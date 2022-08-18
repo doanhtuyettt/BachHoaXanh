@@ -4,6 +4,7 @@ import Cate from "../Cate/cate";
 import { products } from "../../Data";
 import { useContext } from "react";
 import { ProductContext } from "../Context/ContextProvider";
+import { Link } from "react-router-dom";
 
 const Category =() =>{
     const {onAdd} = useContext(ProductContext);
@@ -15,10 +16,10 @@ const Category =() =>{
                     <h3 className="hometitle">SẢN PHẨM MỚI</h3>
                     {products.filter((product) => {
                         return product.newProduct;
-                    }).map( (item) =>
+                    }).map((item) =>
                     <div className="col-lg-3" id="card" key={item.id}>
                         <div className="card">
-                            <img className="card-img-top" alt='image' src={item.image}/>
+                            <Link to={'/item/:' + `${item.id}`}><img className="card-img-top" alt='image' src={item.image}/></Link>
                             <div className="card-body">
                                 <h5>{item.name}</h5>
                                 <div className="discount">new</div>

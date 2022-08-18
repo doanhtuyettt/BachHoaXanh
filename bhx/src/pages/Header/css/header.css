@@ -25,9 +25,7 @@
   --primary-font: 'Roboto', sans-serif;
   --secondry-font: 'Quicksand', sans-serif;
 }
-a{
-  color: var(--white-color);
-}
+
 a,
 a:hover {
   text-decoration: none;
@@ -152,7 +150,9 @@ a[aria-expanded="true"]::before {
 .navbar-header{
   padding: 0;
 }
-
+.navbar-nav>li>a{
+  color: white;
+}
 .navbar-header img{
   width: 180px;
 
@@ -191,4 +191,8 @@ form input {
 .nav li{
   left: -10px;
   top: 2px;
+}
+
+.linkstatic {
+  padding: 10px 10px 5px;
 }

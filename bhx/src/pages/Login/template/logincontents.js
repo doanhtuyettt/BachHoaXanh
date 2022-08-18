@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/login.css';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import NotificationManager from 'react-notifications/lib/NotificationManager';
@@ -8,8 +8,6 @@ function LoginContents(){
   const [user,setUser] = useState({});
   const [error,setError] = useState({});
   const [isSubmited,setIsSubmited] = useState(false);  
-
-
   const [state,setState] = useState({
     mail : '',
     pass : '',
@@ -23,20 +21,29 @@ function LoginContents(){
       [event.target.name]: event.target.value,
     })
   }
-
-  console.log(state.mail)
   const email = state.mail;
-  console.log(state.pass)
   const password = state.pass;
 
-    const handleSubmit=(event)  =>{
-    event.preventDefault();
+  useEffect(() => {
+		const unSubcribe = auth.onAuthStateChanged((authUser) => {
+			if(authUser) {
+				setUser(authUser);
 
-      signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-          setIsSubmited(true) ;
-          setUser(userCredential.user);
-          console.log(user);
-        })
+			} else {
+				setUser({});
+			}
+		});
+		return () => {
+			unSubcribe();
+		}
+	}, [user, email])
+
+  const handleSubmit=(event)  =>{
+    event.preventDefault();
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      setIsSubmited(true) ;
+      setUser(userCredential);
+    })
     .catch( (error)=> {
       if(error.code === 'auth/user-not-found'){
         return 'Sai email !'
@@ -44,25 +51,9 @@ function LoginContents(){
       if( error.code === 'auth/wrong-password'){
         return 'Sai mật khẩu !'
       }
-      
       NotificationManager.error(error.code)
-      console.log(error);
       setError({ error });
     })
-    
-    // signInWithEmailAndPassword(auth, email, password)
-    // ((userCredential) => {
-    //   // Signed in 
-    //   const user = userCredential.user;
-    //   // ...
-    // })
-    // .catch((error) => {
-    //   const errorCode = error.code;
-    //   const errorMessage = error.message;
-    //   console.log(errorCode)
-    //   console.log(errorMessage)
-    // }) 
-   
   }
 
  return (

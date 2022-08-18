@@ -3,20 +3,17 @@ import MainContainer from "./pages/Main/maincontainer";
 import LoginContainer from "./pages/Login/logincontainer";
 import SignInContainer from './pages/Signin/signincontainer';
 import CartContainer from "./pages/Cart/cartcontainer";
-// import ItemContents from './pages/Item/template/Itemcontents';
+import ItemContainer from './pages/Item/Itemcontainer';
 import ContextProvider from './pages/Context/ContextProvider';
 import Invoice from './pages/Invoice/invoice';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer } from 'react-notifications';
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
   apiKey: "AIzaSyDDccoeFBn-zu0pK4-uc-wHIezs7NidCC0",
   authDomain: "bachhoaxanh-b01c6.firebaseapp.com",
@@ -42,7 +39,7 @@ class App extends Component {
                 <Route exact path="/" element={<MainContainer />}/>
                 <Route path="/login" element={<LoginContainer auth = {auth}/>}/>
                 <Route path="/pay" element={<Invoice />}/>
-                {/* <Route path="/item/:id" component={ItemContents} />*/}
+                <Route path="/item/:index" element={<ItemContainer />} />
                 <Route path="/signup" element={<SignInContainer auth = {auth}/>}/>
                 <Route path="/cart" element={<CartContainer />}/> 
               </Routes>
