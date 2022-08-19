@@ -1,4 +1,6 @@
-import { list } from "../../Data"
+// import { list } from "../../Data"
+import { list } from "../../../Data"
+
 const Menu =() => {
     return(
         <div className="hero__categories">

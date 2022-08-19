@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { products } from '../../Data';
 import { ProductContext } from '../Context/ContextProvider';
 import { useContext } from 'react';
-import Menu from '../Menu/menu';
+import Menu from './template/menu';
 
 const Header = () => {
     const padding = {

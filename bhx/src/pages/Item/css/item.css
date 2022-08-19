@@ -1,0 +1,56 @@
+.card-bodies .card_img{
+    width: 30%;
+    min-height: 381px;
+}
+
+.infosell {
+    overflow: visible;
+    width: 410px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.nameproduct {
+    display: block;
+    overflow: hidden;
+    line-height: 1.3em;
+    font-size: 22px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+.ratinglist-price {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.boxprice {
+    display: inline-block;
+}
+.boxprice strong {
+    display: inline-block;
+    font-size: 24px;
+    color: #c10017;
+    vertical-align: middle;
+}
+.boxprice .strike {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+.quantitynum {
+    display: block;
+    overflow: hidden;
+    background: #008848;
+    font-size: 18px;
+    color: #fff !important;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 16px 0;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: 100%;
+}

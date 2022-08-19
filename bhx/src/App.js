@@ -34,12 +34,11 @@ class App extends Component {
         <>
         <ContextProvider>
             <Router>
-            
               <Routes>
                 <Route exact path="/" element={<MainContainer />}/>
                 <Route path="/login" element={<LoginContainer auth = {auth}/>}/>
                 <Route path="/pay" element={<Invoice />}/>
-                <Route path="/item/:index" element={<ItemContainer />} />
+                <Route path="/:id" element={<ItemContainer />} />
                 <Route path="/signup" element={<SignInContainer auth = {auth}/>}/>
                 <Route path="/cart" element={<CartContainer />}/> 
               </Routes>

@@ -19,7 +19,7 @@ const Category =() =>{
                     }).map((item) =>
                     <div className="col-lg-3" id="card" key={item.id}>
                         <div className="card">
-                            <Link to={'/item/:' + `${item.id}`}><img className="card-img-top" alt='image' src={item.image}/></Link>
+                            <Link to={`/${item.id}`}><img className="card-img-top" alt='image' src={item.image}/></Link>
                             <div className="card-body">
                                 <h5>{item.name}</h5>
                                 <div className="discount">new</div>
