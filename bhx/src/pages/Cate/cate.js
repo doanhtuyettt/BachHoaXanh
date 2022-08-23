@@ -4,7 +4,7 @@ import './css/cate.css'
 
 const Cate =({type}) =>{
     return (
-        <div className="cate">
+        <div className="cate" id={type}>
             <div className="groupfeature">
                 <h3 className="hometitle">{type}</h3>
                 {products.filter((product) => {return product.type === type}).map((item) =>                                                      

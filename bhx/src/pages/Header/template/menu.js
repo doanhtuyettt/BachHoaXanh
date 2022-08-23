@@ -27,6 +27,14 @@ const Menu =() => {
                         </li>
                         </ul>
                 </li>)}
+                <li>
+                    <a
+                        target={"_blank"}
+                        href="https://mohammadyousefvand.github.io/Memory-Card-Game/"
+                        className="btn_link_to_game"
+                        rel="noreferrer"
+                    ><b>GAME</b></a>
+                </li>
             </ul>
         </div>
     )

@@ -1,17 +1,52 @@
 import React from 'react';
 import './css/header.css'
 import { Link } from 'react-router-dom';
-import { products } from '../../Data';
 import { ProductContext } from '../Context/ContextProvider';
-import { useContext } from 'react';
+import { useContext,useEffect,useState } from 'react';
 import Menu from './template/menu';
+import { ref,onValue } from 'firebase/database';
+import { db } from '../../App';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from "firebase/auth";
+import { auth } from '../../App';
+import { data } from '../../Data';
+
 
 const Header = () => {
     const padding = {
         padding: 15
     };
-    const {cartItems,setQuery,query} = useContext(ProductContext);
+    const {cartItems,setQuery} = useContext(ProductContext);
+    const { currentUser } = useContext(ProductContext);
+    const [username, setUsername] = useState("");
+    const navigate = useNavigate();
 
+    const clickLogin = () => {
+        if (currentUser) {
+          signOut(auth);
+        } else {
+          navigate("/login");
+        }
+      };
+    
+      const clickSignup = () => {
+        navigate("/signup");
+      };
+    
+   
+    useEffect(() => {
+        if (currentUser) {
+        const starCountRef = ref(db, "users/" + currentUser.uid);
+        onValue(starCountRef, (snapshot) => {
+            if (snapshot.exists()) {
+            var data = snapshot.val();
+            setUsername(data.name);
+            }
+        });
+        }
+    }, [currentUser]);
+
+    
     return (
         <nav className="navbar navbar-expand-lg navigation-wrap">
             <div className="container-fluid">
@@ -37,13 +72,15 @@ const Header = () => {
                     </Link>
                     </li>
                 </ul>
+               
                 <ul className="nav navbar-nav navbar-right">
-                    <li><Link style={padding} to="/login"><span className="glyphicon glyphicon-user"></span>Đăng nhập</Link></li>
-                    <li><Link style={padding} to="/signup"><span className="glyphicon glyphicon-log-in"></span>Đăng ký</Link></li>
+                    <li><span className="glyphicon glyphicon-user"/>{currentUser && `Xin chào ${currentUser.email.slice(0,5)} !` }<button className='btnh'onClick={clickLogin}>{currentUser ? "ĐĂNG XUẤT" : "ĐĂNG NHẬP"}</button>
+                    {!currentUser && <button className='btnh'onClick={clickSignup}>ĐĂNG KÝ</button>}</li>
                 </ul>
+
+
                 <form>
                     <input type="text" placeholder="Tìm kiếm món hàng tại đây ..." onChange={(e) => setQuery(e.target.value)}/>
-                    {console.log(products.filter((item) => item.name.toLowerCase().includes(query)))}
                     <div className="input-group-btn">
                         <button className="btn btn-default" type="submit">
                             <i className="glyphicon glyphicon-search"></i>

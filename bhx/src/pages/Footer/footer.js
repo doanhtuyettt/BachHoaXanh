@@ -1,9 +1,14 @@
 import './css/footer.css';
 
 const Footer =() =>{
+    const handelToTop = () => {
+        window.scrollTo(0, 0);
+      };
     return (
         <footer>
             <div className='boxfooter'>
+            <span onClick={handelToTop} className ="glyphicon glyphicon-arrow-up" id="go_top">  
+            </span>
                 <div className='benefit'>
                     <div>
                         <p>Đặt online <b>giao tận nhà ĐÚNG GIỜ</b><br />(nếu trễ tặng PMH 50.000₫)</p>

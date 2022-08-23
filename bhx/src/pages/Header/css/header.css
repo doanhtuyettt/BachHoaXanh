@@ -196,3 +196,20 @@ form input {
 .linkstatic {
   padding: 10px 10px 5px;
 }
+
+.btnh{
+  height: 55px;
+  top :0;
+  border: none;
+  background-color: var(--primary-color);
+  margin-right: 25px;
+  color: #dbdbdb;
+  margin-left: 15px;
+
+}
+.navbar-right span{
+  color: #dbdbdb;
+}
+.nav li{
+  color: #dbdbdb;
+}

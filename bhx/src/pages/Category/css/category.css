@@ -79,3 +79,11 @@
 span.price{
     color: #df4024;
 }
+
+.test{
+    display: block;
+}
+select {
+    margin-left: 10px;
+    width: 12%;
+}

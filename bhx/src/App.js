@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import MainContainer from "./pages/Main/maincontainer";
 import LoginContainer from "./pages/Login/logincontainer";
-import SignInContainer from './pages/Signin/signincontainer';
+import SignUpContainer from './pages/Signup/signupcontainer';
 import CartContainer from "./pages/Cart/cartcontainer";
 import ItemContainer from './pages/Item/Itemcontainer';
 import ContextProvider from './pages/Context/ContextProvider';
@@ -9,6 +9,7 @@ import Invoice from './pages/Invoice/invoice';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer } from 'react-notifications';
+import {getDatabase} from "firebase/database"
 
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
@@ -25,8 +26,10 @@ const firebaseConfig = {
 };
 
 // // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+export const db = getDatabase(app)
+
 
 class App extends Component {
   render() {
@@ -38,9 +41,9 @@ class App extends Component {
                 <Route exact path="/" element={<MainContainer />}/>
                 <Route path="/login" element={<LoginContainer auth = {auth}/>}/>
                 <Route path="/pay" element={<Invoice />}/>
-                <Route path="/:id" element={<ItemContainer />} />
-                <Route path="/signup" element={<SignInContainer auth = {auth}/>}/>
+                <Route path="/signup" element={<SignUpContainer auth = {auth}/>}/>
                 <Route path="/cart" element={<CartContainer />}/> 
+                <Route path="/:id" element={<ItemContainer />} />
               </Routes>
               <NotificationContainer/>
             </Router>

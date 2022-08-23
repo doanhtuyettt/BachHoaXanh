@@ -10,7 +10,6 @@ const PayCart = () =>{
     return(
         <div className="card-bodies">
             <h5 className="card-text text-right">Tiền hàng : {itemsPrice}</h5>
-            {console.log(cartItems)}
             <p className="card-text text-right">Phí giao hàng : {shippingPrice}</p>
             <p className="card-text text-right">Tổng cộng : {totalPrice}</p>
         </div>
